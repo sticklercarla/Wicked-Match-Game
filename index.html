@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>Glorious Pegasus Match Game</title>
+  	<link rel="stylesheet" href="index.css">
+    <link href=“https://fonts.googleapis.com/css?family=Mountains+of+Christmas%7COpen+Sans+Condensed:300&display=swap” rel=“stylesheet”>
+    <script defer type="text/javascript" src="adapter.js"></script>
+    <script defer type="text/javascript" src="index.js"></script>
+    <script defer type="text/javascript" src="game.js"></script>
+    <script defer type="text/javascript" src="user.js"></script>
+  </head>
+
+  <body>
+    <header id="header">
+      <h1 id="title">Wicked Match Game</h1>
+
+      <div id="menu-bar">
+        <p id="new-game" class="menu-item">New Game</p>
+        <p id="rules" class="menu-item">Rules</p>
+        <p id="leaderboard" class="menu-item">Leaderboard</p>
+        <p id="user-button" class="menu-item">Log In</p>
+      </div>
+    </header>
+
+    <div id="game-flex-box">
+      <div id="game-container" class="game-deets">
+          <h1 id="game-h1"> Moves:</h1>
+          <h1 id="click-count">0</h1>
+        <div id="game-grid">
+            <!-- 2x2 card grid -->
+        </div>
+      </div>
+
+      <div id="right-panel" class="game-deets">
+        <div id="rt-panel-data">
+          <h1>Welcome To</h1>
+          <h1>Wicked</h1><h1>Match Game</h1>
+          <br>
+          <h2>Log In Above To Play</h2>
+        </div>
+
+        <div id="rt-panel-middle">
+          <h1></h1>
+        </div>
+
+        <div id="rt-panel-bottom">
+          <h1></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="gameOver">
+      <center><h2>🎉 Congratulations 🎉</h2></center>
+      <center><h2> You matched all the Elphabas! </h2></center>
+      <!-- <center><p>You made <span id=finalMove> </span> moves </p></center> -->
+      <center><button class="closeBtn" onclick="newGame()"> New Game</button></center>
+    </div>
+    <footer>
+      <!-- <p>Artwork by: <a href="https:">Rachel Rath</a></p> -->
+      <p><a href="https://accesslabs.org">Flatiron School/Access Labs MOD 3 Project</a></p>
+      <p>Created by: <a href="https://github.com/sticklercarla">Carla Stickler</a></p>
+    </footer>
+  </body>
+</html>

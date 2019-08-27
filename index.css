@@ -1,0 +1,232 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#header {
+  text-align: center;
+}
+
+h1 {
+    font-family: ‘Mountains of Christmas’, cursive;
+    text-shadow: 2px 2px 5px black;
+    color: white;
+}
+
+h2 {
+  font-family: ‘Mountains of Christmas’, cursive;
+  color: black;
+  text-shadow: 2px 2px 5px white;
+}
+
+#title {
+  font-family: ‘Mountains of Christmas’, cursive;
+  font-size: 60px;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 5px black;
+}
+
+#game-container {
+  font-family: ‘Mountains of Christmas’, cursive;
+  font-size: 16px;
+  text-shadow: 2px 2px black;
+  color: white;
+}
+
+#menu-bar, footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 2px 2px 5px black;
+  font-family: ‘Open Sans Condensed’, sans-serif;
+  color: black;
+}
+
+.menu-item {
+  flex-grow: 0;
+}
+p:hover {
+  transition-property: text;
+  transform: scale(1.1);
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  transition-property: text;
+  transform: scale(1.1);
+  cursor: pointer;
+  color: green;
+  /* text-shadow: 1px 1px lightgrey; */
+}
+
+.menu-item:hover {
+  transition-property: text;
+  transform: scale(1.1);
+  cursor: pointer;
+  /* text-shadow: 1px 1px black; */
+  color: green;
+}
+
+button:hover {
+  transition-property: text;
+  transform: scale(1.5);
+  cursor: pointer;
+  text-shadow: 1px 1px 1px 1px lightgrey;
+  box-shadow: 5px 5px 5px 5px grey;
+  border-radius: 5px;
+}
+
+input:hover {
+  transition-property: text;
+  transform: scale(1.5);
+  cursor: pointer;
+  text-shadow: 1px 1px lightgrey;
+  box-shadow: 5px 5px 5px 5px grey;
+  border-radius: 5px;
+}
+
+#game-h1, #click-count {
+  display: inline;
+  margin: 0;
+}
+
+body {
+  margin: 20px 0;
+  background-image: url("images/wicked_wallpaper2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#game-flex-box {
+  display: flex;
+  flex-grow: 0;
+  justify-content: space-around;
+  text-align: center;
+}
+
+input {
+  background-color: white;
+}
+button {
+  background-color: white;
+}
+
+#game-container{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px black solid; */
+  flex-grow: 4;
+  justify-content: center;
+}
+
+#right-panel {
+  color: black;
+  /* text-shadow: 2px 2px 5px black; */
+  font-family: ‘Open Sans Condensed’, sans-serif;
+}
+
+/* BEGINNING OF GAME */
+#game-grid {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px 5px grey;
+}
+
+.card {
+  position: relative;
+  transition: all 0.1s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  /* background-color: white; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  background: url('images/wicked_square.jpg') no-repeat center center / contain;
+}
+.selected {
+ transform: rotateY(180deg);
+}
+
+.match .front {
+  /* border: 4px solid purple; */
+  background-image: none !important;
+}
+
+/* END OF GAME */
+
+#right-panel{
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: flex-start;
+}
+
+.game-deets {
+  display: flex;
+  flex-grow: 0;
+  /* border: 1px black solid; */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gameOver {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 20px;
+  height: 25%;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  border-radius: 5px;
+  transition: all 5s ease-in-out;
+  box-shadow: black;
+  z-index: 1;
+}
+
+.gameOver button:hover {
+  transition-property: text;
+  transform: scale(1.5);
+  cursor: pointer;
+  text-shadow: 1px 1px lightgrey;
+  box-shadow: 5px 5px grey;
+  border-radius: 5px;
+}
