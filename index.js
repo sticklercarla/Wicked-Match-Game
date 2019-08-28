@@ -103,12 +103,14 @@ const gameData = (gameJson) => {
   const lbUl = document.createElement('ul')
 
   const scoreTitle = document.createElement("h1")
-  scoreTitle.innerText = "Top Scores"
+  scoreTitle.innerText = "Top 5 Scores"
   dataDiv.append(scoreTitle)
-  let gameArray = gameJson.sort(function(game1,game2) {
+  let fullGameArray = gameJson.sort(function(game1,game2) {
     if (game1.click_total > game2.click_total) return 1;
     if (game1.click_total < game2.click_total) return -1;
   });
+
+  let gameArray = fullGameArray.slice(0, 5)
 
   gameArray.forEach (game => {
     let li = document.createElement('li')
